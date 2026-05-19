@@ -40,9 +40,7 @@ scheduler = AsyncIOScheduler(timezone="Europe/Warsaw")
 # ────────────────────────────────────────────────
 
 def authorized(update: Update) -> bool:
-    if not ALLOWED_IDS:
-        return True
-    return update.effective_chat.id in ALLOWED_IDS
+    return True
 
 
 def _get_api_key(cfg: dict) -> str:
